@@ -1,0 +1,11 @@
+{
+  "name": "drammit-site",
+  "version": "1.0.0",
+  "description": "Drammit's website",
+  "repository": "git@github.com:drammit/drammit-site.git",
+  "author": "Gaya Kessler",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  }
+}
