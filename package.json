@@ -9,8 +9,9 @@
     "node-sass": "^4.5.3"
   },
   "scripts": {
-    "build": "npm run clean && npm run html && npm run sass",
+    "build": "npm run clean && npm run images && npm run html && npm run sass",
     "clean": "rm -r ./docs && mkdir docs",
+    "images": "cp -R src/images docs/images",
     "html": "cp src/html/index.html docs/index.html",
     "sass": "node-sass src/sass/drammit.scss docs/drammit.css --output-style compressed"
   }
