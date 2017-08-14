@@ -1,5 +1,22 @@
-html {
-  body {
-    color: red;
+* { box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background: {
+    image: url(./images/hero.jpg);
+    size: cover;
+    repeat: no-repeat;
+    position: 50% 50%;
   }
+  min-height: 72vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
