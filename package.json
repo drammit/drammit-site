@@ -13,7 +13,7 @@
     "build": "npm run clean && npm run images && npm run html && npm run sass",
     "clean": "rm -r ./docs && mkdir docs",
     "images": "cp -R src/images docs/images",
-    "html": "handlebars src/html/index.html -f docs/index.html --min",
+    "html": "mustache src/data/development.json src/html/index.mustache > docs/index.html",
     "sass": "node-sass src/sass/drammit.scss docs/drammit.css --output-style compressed"
   }
 }
