@@ -140,3 +140,13 @@ main {
     }
   }
 }
+
+footer {
+  background: darken($white, 10);
+
+  section {
+    max-width: 800px;
+    padding: 24px;
+    margin: 0 auto;
+  }
+}
