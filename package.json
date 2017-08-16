@@ -11,10 +11,11 @@
     "node-sass": "^4.5.3"
   },
   "scripts": {
-    "build": "npm run clean && npm run images && npm run html && npm run sass",
+    "build": "npm run clean && npm run images && npm run favicons && npm run html && npm run sass",
     "clean": "rm -r ./docs && mkdir docs",
     "images": "cp -R src/images docs/images",
-    "html": "mustache src/data/development.json src/html/index.mustache > docs/index.html",
+    "favicons": "cp src/favicons/* docs",
+    "html": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/development.json src/html/index.mustache > docs/index.html",
     "sass": "node-sass src/sass/drammit.scss docs/css/drammit.css --output-style compressed",
     "server": "light-server -s docs -p 3000",
     "start": "npm run build && npm run server"
