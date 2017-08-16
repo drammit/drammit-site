@@ -69,6 +69,36 @@ header {
   }
 }
 
+nav {
+  ul {
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    list-style: none;
+    margin: 0 12px;
+  }
+
+  a {
+    border: 2px solid $green;
+    color: $green;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: color 200ms ease, background 200ms ease;
+    display: block;
+
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+  }
+}
+
 main {
   @media (min-width: $screen-md) {
     display: flex;
@@ -103,7 +133,7 @@ main {
 
   section {
     padding: 0 24px;
-    margin: 24px 0;
+    margin: 0 0 24px 0;
 
     img {
       width: 295px;
