@@ -17,7 +17,8 @@ html, body {
 
 header {
   background: {
-    image: url(./images/hero.jpg);
+    image: url(../images/hero.jpg);
+    color: $green;
     size: cover;
     repeat: no-repeat;
     position: 50% 50%;
@@ -43,9 +44,13 @@ header {
 
   h2 {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: 400;
     margin: 30px;
+
+    @media (min-width: $screen-md) {
+      font-size: 1.8em;
+    }
   }
 
   img.logo {
