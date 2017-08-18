@@ -6,6 +6,8 @@
   "author": "Gaya Kessler",
   "license": "MIT",
   "dependencies": {
+    "koa": "^2.3.0",
+    "koa-static": "^4.0.1",
     "light-server": "^2.2.1",
     "mustache": "^2.3.0",
     "node-sass": "^4.5.3"
