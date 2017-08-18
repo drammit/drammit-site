@@ -8,7 +8,7 @@ var domain = process.env.PORT ? 'www.dramm.it' : 'localhost';
 app.use(async function redirect301(ctx) {
   if (ctx.req.headers.host !== domain) {
     ctx.status = 301;
-    ctx.redirect(`https://${domain}`);
+    ctx.redirect(`http://${domain}`);
   }
 });
 
