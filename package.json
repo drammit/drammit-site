@@ -8,7 +8,6 @@
   "dependencies": {
     "koa": "^2.3.0",
     "koa-static": "^4.0.1",
-    "light-server": "^2.2.1",
     "mustache": "^2.3.0",
     "node-sass": "^4.5.3"
   },
@@ -22,6 +21,6 @@
     "privacy": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/privacy.mustache > docs/privacy.html",
     "sass": "node-sass src/sass/drammit.scss docs/css/drammit.css --output-style compressed",
     "server": "light-server -s docs -p 3000",
-    "start": "npm run build && npm run server"
+    "start": "node ./server.js"
   }
 }
