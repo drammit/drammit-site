@@ -5,6 +5,9 @@
   "repository": "git@github.com:drammit/drammit-site.git",
   "author": "Gaya Kessler",
   "license": "MIT",
+  "engines": {
+    "node": "~7.9.0"
+  },
   "dependencies": {
     "koa": "^2.3.0",
     "koa-static": "^4.0.1",
@@ -13,14 +16,13 @@
   },
   "scripts": {
     "build": "npm run clean && npm run images && npm run favicons && npm run index && npm run tos && npm run privacy && npm run sass",
-    "clean": "rm -r ./docs && mkdir docs",
+    "clean": "rm -rf ./docs && mkdir docs",
     "images": "cp -R src/images docs/images",
     "favicons": "cp src/favicons/* docs",
     "index": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/index.mustache > docs/index.html",
     "tos": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/tos.mustache > docs/tos.html",
     "privacy": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/privacy.mustache > docs/privacy.html",
     "sass": "node-sass src/sass/drammit.scss docs/css/drammit.css --output-style compressed",
-    "server": "light-server -s docs -p 3000",
     "start": "node ./server.js"
   }
 }
