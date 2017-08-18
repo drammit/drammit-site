@@ -5,12 +5,12 @@ const serve = require('koa-static');
 
 var domain = process.env.PORT ? 'www.dramm.it' : 'localhost';
 
-app.use(async function redirect301(ctx) {
-  if (ctx.req.headers.host !== domain) {
-    ctx.status = 301;
-    ctx.redirect(`http://${domain}`);
-  }
-});
+// app.use(async function redirect301(ctx) {
+//   if (ctx.req.headers.host !== domain) {
+//     ctx.status = 301;
+//     ctx.redirect(`http://${domain}`);
+//   }
+// });
 
 app.use(serve(`${__dirname}/docs`, {
   gzip: true,
