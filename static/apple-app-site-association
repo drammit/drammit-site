@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "2Q4DY3M34T.org.reactjs.native.example.DrammitNative",
+                "paths": [ "/reset-password"]
+            }
+        ]
+    }
+}
