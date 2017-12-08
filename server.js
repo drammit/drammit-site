@@ -9,6 +9,11 @@ app.use(serve(`${__dirname}/docs`, {
 
 app.use(serve(`${__dirname}/static`, {
   gzip: true,
+  setHeaders: (res, path) => {
+    if (path.indexOf('apple-app-site-association') > -1) {
+      res.setHeader('Content-Type', 'application/json');
+    }
+  }
 }));
 
 app.use(async function pageNotFound(ctx) {
