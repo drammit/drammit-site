@@ -7,6 +7,10 @@ app.use(serve(`${__dirname}/docs`, {
   gzip: true,
 }));
 
+app.use(serve(`${__dirname}/static`, {
+  gzip: true,
+}));
+
 app.use(async function pageNotFound(ctx) {
   if (ctx.status !== 404) return;
 
