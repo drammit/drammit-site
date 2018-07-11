@@ -12,18 +12,21 @@
   "dependencies": {
     "koa": "^2.3.0",
     "koa-static": "^4.0.1",
-    "mustache": "^2.3.0",
+    "mustache": "^2.3.0"
+  },
+  "devDependencies": {
     "node-sass": "^4.9.2"
   },
   "scripts": {
-    "build": "npm run clean && npm run images && npm run favicons && npm run index && npm run tos && npm run privacy && npm run sass",
+    "build": "npm run clean && npm run images && npm run favicons && npm run index && npm run tos && npm run privacy && npm run copy-sass",
     "clean": "rm -rf ./docs && mkdir docs",
     "images": "cp -R src/images docs/images",
     "favicons": "cp src/favicons/* docs",
+    "copy-sass": "cp src/sass/drammit.css docs/css/drammit.css",
     "index": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/index.mustache > docs/index.html",
     "tos": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/tos.mustache > docs/tos.html && mkdir docs/tos && cp docs/tos.html docs/tos/index.html",
     "privacy": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/privacy.mustache > docs/privacy.html && mkdir docs/privacy && cp docs/privacy.html docs/privacy/index.html",
-    "sass": "node-sass src/sass/drammit.scss docs/css/drammit.css --output-style compressed",
+    "sass": "node-sass src/sass/drammit.scss src/sass/drammit.css --output-style compressed",
     "postinstall": "npm run build",
     "start": "node ./server.js"
   }
