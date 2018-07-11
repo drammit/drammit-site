@@ -12,7 +12,7 @@
     "koa": "^2.3.0",
     "koa-static": "^4.0.1",
     "mustache": "^2.3.0",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.7.0"
   },
   "scripts": {
     "build": "npm run clean && npm run images && npm run favicons && npm run index && npm run tos && npm run privacy && npm run sass",
