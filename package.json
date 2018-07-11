@@ -6,8 +6,8 @@
   "author": "Gaya Kessler",
   "license": "MIT",
   "engines": {
-    "node": "~8.0.0",
-    "npm": "~5.0.0"
+    "node": "~10.3.0",
+    "npm": "~6.1.0"
   },
   "dependencies": {
     "koa": "^2.3.0",
@@ -15,16 +15,14 @@
     "mustache": "^2.3.0"
   },
   "scripts": {
-    "build": "npm run clean && npm run images && npm run favicons && npm run index && npm run tos && npm run privacy && npm run copy-sass",
+    "build": "npm run clean && npm run images && npm run favicons && npm run index && npm run tos && npm run privacy && npm run sass",
     "clean": "rm -rf ./docs && mkdir docs",
     "images": "mkdir docs/css && cp -R src/images docs/images",
     "favicons": "cp src/favicons/* docs",
-    "copy-sass": "cp src/sass/drammit.css docs/css/drammit.css",
     "index": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/index.mustache > docs/index.html",
     "tos": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/tos.mustache > docs/tos.html && mkdir docs/tos && cp docs/tos.html docs/tos/index.html",
     "privacy": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/privacy.mustache > docs/privacy.html && mkdir docs/privacy && cp docs/privacy.html docs/privacy/index.html",
-    "sass": "node-sass src/sass/drammit.scss src/sass/drammit.css --output-style compressed",
-    "postinstall": "npm run build",
+    "sass": "node-sass src/sass/drammit.scss docs/css/drammit.css --output-style compressed",
     "start": "node ./server.js"
   }
 }
