@@ -14,10 +14,13 @@
     "koa-static": "^4.0.1",
     "mustache": "^2.3.0"
   },
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  },
   "scripts": {
     "build": "npm run clean && npm run images && npm run favicons && npm run index && npm run tos && npm run privacy && npm run copy-sass",
     "clean": "rm -rf ./docs && mkdir docs",
-    "images": "cp -R src/images docs/images",
+    "images": "mkdir docs/css && cp -R src/images docs/images",
     "favicons": "cp src/favicons/* docs",
     "copy-sass": "cp src/sass/drammit.css docs/css/drammit.css",
     "index": "mustache -p src/html/header.mustache -p src/html/footer.mustache src/data/production.json src/html/index.mustache > docs/index.html",
