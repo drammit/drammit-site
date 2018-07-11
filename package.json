@@ -14,9 +14,6 @@
     "koa-static": "^4.0.1",
     "mustache": "^2.3.0"
   },
-  "devDependencies": {
-    "node-sass": "^4.9.2"
-  },
   "scripts": {
     "build": "npm run clean && npm run images && npm run favicons && npm run index && npm run tos && npm run privacy && npm run copy-sass",
     "clean": "rm -rf ./docs && mkdir docs",
