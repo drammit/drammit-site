@@ -6,8 +6,8 @@
   "author": "Gaya Kessler",
   "license": "MIT",
   "engines": {
-    "node": "~7.9.0",
-    "npm": "~4.2.0"
+    "node": "~10.3.0",
+    "npm": "~6.1.0"
   },
   "dependencies": {
     "koa": "^2.3.0",
